@@ -54,3 +54,6 @@ ContraWare was the first video game I created, it was developed with Unity. All 
 ![gif_proplayer](https://github.com/MarcoCarenza/ContraWare/assets/148258941/2e7c0f33-8a6d-4d95-be70-f277e6c6c4b2)
 
 ![gamewon](https://github.com/MarcoCarenza/ContraWare/assets/148258941/60aa8b2d-e7cf-4a00-8870-eddf599bf980)
+
+# Play the game here!
+[My Itch.io - evileyezzzz](https://evileyezzzz.itch.io/contraware)
