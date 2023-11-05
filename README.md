@@ -48,9 +48,9 @@ When collected adds time to the total timer. Making it that the player can exten
 ## Development
 ContraWare was the first video game I created, it was developed with Unity. All the assets with the exception of the background music were created by me. All of the art in the game was made with Pixel Art Studio.
 
-![gamewon](https://github.com/MarcoCarenza/ContraWare/assets/148258941/60aa8b2d-e7cf-4a00-8870-eddf599bf980)
 
 ![gif_inter](https://github.com/MarcoCarenza/ContraWare/assets/148258941/0a5d4685-0680-456a-ae53-6715d66a9fb3)
 
 ![gif_proplayer](https://github.com/MarcoCarenza/ContraWare/assets/148258941/2e7c0f33-8a6d-4d95-be70-f277e6c6c4b2)
 
+![gamewon](https://github.com/MarcoCarenza/ContraWare/assets/148258941/60aa8b2d-e7cf-4a00-8870-eddf599bf980)
