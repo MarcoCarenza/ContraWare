@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
             Destroy(effect, 0.3f);
             Destroy(gameObject);
             collision.collider.GetComponent<HP>().TakeDamage(1);
-            FindObjectOfType<AudioManagement>().Play("enemyHitWrong");
+            FindObjectOfType<AudioManagement>().Play("hitCPU");
         }
 
         if (collision.collider.tag == "Enemy" && player.GetPlayerColorValue() == collision.collider.GetComponent<Enemy>().GetEnemyValue())

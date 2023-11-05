@@ -42,6 +42,7 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu()
     {
         Debug.Log("Loading Game...");
+        FindObjectOfType<AudioManagement>().Stop("BGM");
         SceneManager.LoadScene("Main Menu");
         Resume();
     }

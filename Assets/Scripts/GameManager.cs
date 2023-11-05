@@ -51,10 +51,20 @@ public class GameManager : MonoBehaviour
     public float spawnTimeHourglass = 0f;
     public float timerH = 0f;
     public GameObject hourglass;
-       
+
+   
+
+    
+
+
+    
+    
+    
+
+
     //was for another method of enemy generation
     //   [SerializeField]
-   //private GameObject virusPrefab;
+    //private GameObject virusPrefab;
     //[SerializeField]
     //private float virusInterval = 3.5f; //decide the range between when enemies should spawn
 
@@ -62,6 +72,24 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
 {
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        Scene MMScene = SceneManager.GetSceneByName("Main Menu");
+        Scene MGScene = SceneManager.GetSceneByName("Main Game");
+
+        if (currentScene == MMScene)
+        {
+            FindObjectOfType<AudioManagement>().Stop("BGM");
+            FindObjectOfType<AudioManagement>().Play("MMBGM");
+        }
+
+        if (currentScene == MGScene)
+        {
+            FindObjectOfType<AudioManagement>().Stop("MMBGM");
+            FindObjectOfType<AudioManagement>().Play("BGM");
+        }
+
+
         currentTime = startingTime;
         points= 0;
         pHP = GameObject.Find("Player").GetComponent<HP>();
@@ -71,13 +99,25 @@ public class GameManager : MonoBehaviour
 
         highScore = PlayerPrefs.GetInt("HighScore", 0);
         highscoreText.text = highScore.ToString();
-        //StartCoroutine(spawnEnemy(virusInterval, virusPrefab));
+
         EnemySpawner();
+
+
+
+
+
 }
+
+    void Awake()
+    {
+        
+    }
 
 // Update is called once per frame
 void Update()
 {
+        
+
         currentTime -= 1 * Time.deltaTime; 
         countdownText.text = currentTime.ToString();
                 
@@ -99,7 +139,7 @@ void Update()
             gameWon(playerHP, cpuHP); // End game
         }
 
-     
+       
        
 
         if (spawnTimePowerUp == 0f)
@@ -140,6 +180,8 @@ void Update()
             timerH = 0f;
             spawnTimeHourglass = 0f;
         }
+
+        
 
     }
 
@@ -275,15 +317,18 @@ void Update()
     {
         SceneManager.LoadScene("Game Over");
         FindObjectOfType<AudioManagement>().Stop("Hover");
+        FindObjectOfType<AudioManagement>().Stop("BGM");
+        FindObjectOfType<AudioManagement>().Play("Loss");
         SetHighscore();
         SetScore();
     }
 
     public void gameWon(int pHP, int cHP)
     {
-       
         SceneManager.LoadScene("Game Over");
         FindObjectOfType<AudioManagement>().Stop("Hover");
+        FindObjectOfType<AudioManagement>().Stop("BGM");
+        FindObjectOfType<AudioManagement>().Play("Victory");
         addScoreBonus(pHP, cHP);
         SetHighscore();
         SetScore();
@@ -325,13 +370,6 @@ void Update()
         currentTime+= time;
     }
 
-    // this was another way of having an enemy spawner.
-    // private IEnumerator spawnEnemy(float interval, GameObject enemy)
-    // {
-    //    yield return new WaitForSeconds(interval);
-    //    GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(-137f, 97), Random.Range(34, -28f), 0), Quaternion.identity);
-    //    StartCoroutine(spawnEnemy(interval, enemy));
-    //}
 
 
 

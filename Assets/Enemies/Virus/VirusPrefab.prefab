@@ -143,7 +143,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   currentHealth: 0
+  Player: {fileID: 0}
   healthBar: {fileID: 0}
+  floatingPoints: {fileID: 4663059795813139370, guid: 541d6671c24b77041b10fd2ffcaf0a83, type: 3}
 --- !u!114 &4442265892729552783
 MonoBehaviour:
   m_ObjectHideFlags: 0

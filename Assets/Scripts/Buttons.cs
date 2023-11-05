@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
     PauseMenu PM;
+    public GameObject settingsUI;
+    public GameObject tutorialUI;
 
     public void Quit()
     {
@@ -15,26 +17,29 @@ public class Buttons : MonoBehaviour
     public void Replay()
     {
         Debug.Log("Loading Game...");
+        FindObjectOfType<AudioManagement>().Stop("MMBGM");
+        FindObjectOfType<AudioManagement>().Play("BGM");
         SceneManager.LoadScene("Main Game");
-        
     }
 
     public void Settings()
     {
         Debug.Log("Loading Settings...");
-        SceneManager.LoadScene("Settings");
+        settingsUI.SetActive(true);
     }
 
     public void Tutorial()
     {
         Debug.Log("Loading Tutorial...");
-        SceneManager.LoadScene("Tutorial");
+        tutorialUI.SetActive(true);
     }
 
     public void MainMenu()
     {
         Debug.Log("Loading Game...");
-        SceneManager.LoadScene("Main Menu");
+        settingsUI.SetActive(false);
+        tutorialUI.SetActive(false);
+        
     }
 
    

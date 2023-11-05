@@ -19,6 +19,8 @@ public class ColorChange : MonoBehaviour
     //Call to animator
     public Animator anim;
 
+    float canSwapColor= 1f;
+    float swapRate = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +41,7 @@ public class ColorChange : MonoBehaviour
 
 
             //Let's say Q increases playerValue
-            if (Input.GetKeyDown("e"))
+            if (Input.GetKeyDown("e") || Input.GetKeyDown("space") && Time.time > canSwapColor)
             {
                 // Debug.Log("Pressed E !");
                 //If we are at the end of the color values loop, we cycle back to 0
@@ -54,6 +56,7 @@ public class ColorChange : MonoBehaviour
                 }
                 //We then change the player's sprite according to the new value with the color associated
                 ChangePlayerColor(playerValue);
+                canSwapColor = Time.time + swapRate;
             }
             //Let's say E decreases playerValue
             if (Input.GetKeyDown("q"))
