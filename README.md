@@ -42,8 +42,7 @@ When collected heals the anti-virus' current HP.
 
 ### Hourglass
 
-![timePowerUp (1)](https://github.com/MarcoCarenza/ContraWare/assets/148258941/3c2eafd3-2b93-4001-8cf5-40380f61a5ce)
-
+![timePowerUp](https://github.com/MarcoCarenza/ContraWare/assets/148258941/e73637c8-a38d-4ffb-8f1c-55ded430b82a)
 
 When collected adds time to the total timer. Making it that the player can extend the playtime to reach a higher score.
 
