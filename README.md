@@ -1,4 +1,4 @@
-### ContraWare
+# ContraWare
 ![contrawarethumbnail](https://github.com/MarcoCarenza/ContraWare/assets/148258941/23af6c5b-6b9d-4dec-b811-f486016dfc4c)
 
 ## Game Intro
@@ -28,19 +28,19 @@ Above are controls for how to play ContraWare, you must match the color of the m
 The controls can be found in game under the "Tutorial" Menu.
 
 ## Power-ups
-# Coin
+### Coin
 
 ![coin](https://github.com/MarcoCarenza/ContraWare/assets/148258941/74068c67-e73e-44f8-a5ff-817cf8ebf8d5)
 
 When collected adds points to the current score.
 
-# Heart
+### Heart
 
 ![heart 1](https://github.com/MarcoCarenza/ContraWare/assets/148258941/bda340f9-409c-4e5c-840d-3f41d57c907f)
 
 When collected heals the anti-virus' current HP.
 
-# Hourglass
+### Hourglass
 
 ![timePowerUp (1)](https://github.com/MarcoCarenza/ContraWare/assets/148258941/3c2eafd3-2b93-4001-8cf5-40380f61a5ce)
 
